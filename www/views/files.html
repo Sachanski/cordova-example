@@ -1,0 +1,12 @@
+<div class="flex-fill flex-rows" style="padding: 10px;">
+	<div>
+		<span>Filename</span><input ng-model="filename" />
+	</div>
+	<div>File contentes</div>
+	<textarea ng-model="contents" class="flex-fill"></textarea>
+	<button ng-click="saveFile()" ng-disabled="!filename || !contents">Save</button>
+	<div ng-repeat="f in files">
+		<span>{{f.name}}</span><span ng-click="deleteFile(f)">&times;</span>
+		<div style="font-size: 8px;"><i>{{f.uri}}</i></div>
+	</div>
+</div>

@@ -1,0 +1,5 @@
+<div class="flex-fill">
+	<div ng-repeat="c in contacts | orderBy:'name.familyName'">
+		<span>{{c.name.givenName}}</span> <b>{{c.name.familyName}}</b>
+	</div>
+</div>
